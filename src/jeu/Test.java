@@ -1,4 +1,4 @@
-package fr.jeuDeDes.jeu;
+package jeu;
 
 import jeuDeDes.Gobelet;
 
@@ -10,8 +10,8 @@ public class Test {
 
         Gobelet gobelet = new Gobelet(5);
         gobelet.lancer();
-
         gobelet.afficher_score();
+
 
 
     }

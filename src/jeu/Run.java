@@ -1,4 +1,4 @@
-package fr.jeuDeDes.jeu;
+package jeu;
 
 public class Run {
 }
