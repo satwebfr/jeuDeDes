@@ -3,9 +3,6 @@ package jeuDeDes;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Le class GOBLET aura un certain nombre de dés, ce qui donnera une liste des résultats de chaque dé
-  */
 public class Gobelet {
     De de = new De();
     private int valeur ;
@@ -40,9 +37,7 @@ public class Gobelet {
         this.des = des;
     }
 
-    /**
-     * LANCER() : change la valeur des dés du gobelet ; met à jour la valeur du gobelet
-     */
+    // change la valeur des dés du gobelet ; met à jour la valeur du gobelet
     public void lancer(){
         for (int i = 0; i < this.nb_des; i++) {
             des.add(de.lancer());
@@ -52,9 +47,6 @@ public class Gobelet {
         //System.out.println("valeur des des : " + getDes());
     }
 
-    /**
-     * AFFICHER_SCORE() : affiche le score en tant que valeur de gobelet pour chaque lancer() créé
-     */
     public void afficher_score(){
         System.out.println("Score : " + getValeur());
     }

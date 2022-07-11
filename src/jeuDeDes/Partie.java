@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * PARTIE : Après avoir reçu le nombre de joueurs, le nombre de parties et le nombre de dés, il lance le jeu
- */
 public class Partie {
     public List<String> joueurs;
     Gobelet gobelet ;
@@ -43,21 +40,18 @@ public class Partie {
         setNb_joueurs(nomjus);
     }
 
-    /**
-     * LANCEJOUE() : A chaque lancement -> le gobelet est lancé et le score puis le max est obtenu
-     */
     public void lancerJoue() {
+
         System.out.println("\n--------Le jeu commence----------");
-        // Pour chaque Parti
         for (int i = 0; i < this.getNb_tours(); i++) {
             System.out.println("===== Tour 0" + i+1 + " ======");
-            // // Pour chaque Jouer
+
             for (int j = 0; j < this.getNb_joueurs(); j++) {
                 gobelet = new Gobelet(nb_des);
                 System.out.println("Jouer : " + joueurs.get(j) );
                 gobelet.lancer();
                 gobelet.afficher_score();
-                // trouver la valeur maximale
+                // set tha max value
                 if (gobelet.getValeur() > max) {
                     max = gobelet.getValeur();
                     gagnant = joueurs.get(j);
@@ -66,8 +60,6 @@ public class Partie {
         }
     }
 
-    // Enfin, obtenez le nom de jouer avec où le jeu (max) correspondant
-    // et la valeur (max) obtenue à partir de lanceJouer() sont affichés
     public void afficher_gagnant() {
         System.out.println("\n Gagnant :: "+"\033[0;1m"+ gagnant + " avec " + max + " points!");
     }
