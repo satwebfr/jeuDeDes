@@ -1,7 +1,6 @@
 package fr.jeuDeDes.jeu;
 
-import fr.jeuDeDes.De;
-import fr.jeuDeDes.Gobelet;
+import jeuDeDes.Gobelet;
 
 public class Test {
     public static void main(String[] args) {
