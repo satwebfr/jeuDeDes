@@ -11,37 +11,21 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
 
-//        De de = new De();
-//        System.out.println(de.lancer());
-//
-//        Gobelet gobelet = new Gobelet(5);
-//        gobelet.lancer();
-//        gobelet.afficher_score();
+        De de = new De();
+        System.out.println(de.lancer());
 
-        // demander au lancement de la partie le nombre de dés,
-        // le nombre de tours et
-        // le nom des participants
-        Scanner scanner = new Scanner(System.in);
+        Gobelet gobelet = new Gobelet(5);
+        gobelet.lancer();
+        gobelet.afficher_score();
 
-        System.out.print("Nombre des tours : ");
-        int nb_tours = scanner.nextInt();
+        Partie partie = new Partie(3,4);
 
-        System.out.print("Nombre des des : ");
-        int nb_des = scanner.nextInt();
+        partie.joueurs = new ArrayList<String>(3);
+        partie.joueurs.add("Ben");
+        partie.joueurs.add("Adale");
+        partie.joueurs.add("Kenny");
 
-
-        System.out.print("Nombre des joueurs : ");
-        int nb_joueurs = scanner.nextInt();
-
-
-        Partie partie = new Partie(nb_tours, nb_des);
-        partie.joueurs = new ArrayList<String>(nb_joueurs);
-        for (int i = 0; i < nb_joueurs; i++) {
-            System.out.print(" Nom de jouer : ");
-            partie.joueurs.add(scanner.next());
-        }
-
-        partie.initialiser(nb_joueurs);
+        partie.initialiser(3);
         partie.lancerJoue();
         partie.afficher_gagnant();
 
